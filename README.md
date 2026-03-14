@@ -421,6 +421,26 @@ Leave `VPN_PROXY_URL` empty (default) if you don't need proxy support.
 
 ---
 
+## 🛠️ Setup CLI
+
+`setup.py` is an interactive setup helper. Run it once after installation to configure the gateway:
+
+```bash
+python setup.py
+```
+
+It will prompt you to choose an action:
+
+| Option | Description |
+|--------|-------------|
+| **Generate API key** | Creates a `sk-<hex>` key; optionally saves it to `.env` as `PROXY_API_KEY` |
+| **Set AWS region** | Pick from all supported regions; optionally saves `KIRO_REGION` to `.env` |
+| **Generate nginx config** *(optional)* | Enter a domain → get a production-ready nginx config with SSL/certbot and streaming-safe settings |
+
+> Restart the server after any `.env` changes for them to take effect.
+
+---
+
 ## 📡 API Reference
 
 ### Endpoints
